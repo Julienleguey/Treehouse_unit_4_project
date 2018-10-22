@@ -39,5 +39,5 @@ const game = new Game();
 // starting the game
 document.getElementById('btn__reset').addEventListener('click', function () {
   document.getElementById('overlay').style.display = 'none';
-  addPhraseToDisplay();
+  game.getRandomPhrase().addPhraseToDisplay();
 });
