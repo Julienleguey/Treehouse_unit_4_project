@@ -3,7 +3,7 @@
 //   'bla bla bla'
 // ];
 //
-// //sélection de la phrase
+// //selecting the phrase and creating an array with every single character as an object
 // function getRandomPhrase() {
 //   let phraser = [];
 //   const ranNum = parseInt(Math.random()*2);
@@ -24,12 +24,20 @@
 //   let phrase = getRandomPhrase();
 //   phrase.forEach (character => document.querySelector('#phrase ul').insertAdjacentHTML('beforeend', character));
 // }
+//
+//
+//
+// // starting the game
+// document.getElementById('btn__reset').addEventListener('click', function () {
+//   document.getElementById('overlay').style.display = 'none';
+//   addPhraseToDisplay();
+//   console.log('it works in app.js');
+// });
 
-
+const game = new Game();
 
 // starting the game
 document.getElementById('btn__reset').addEventListener('click', function () {
   document.getElementById('overlay').style.display = 'none';
-  phrase.addPhraseToDisplay();
-  console.log('it works in app.js');
+  addPhraseToDisplay();
 });

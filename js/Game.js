@@ -8,18 +8,20 @@ class Game {
   }
 
   // methods
+
+  //selecting the phrase and creating an array with every single character as an object
   getRandomPhrase() {
-    let phraser = [];
+    let phrase = [];
     const ranNum = parseInt(Math.random()*2);
     this.phrases[ranNum].split('').map(letter => {
       const regex = /^\w$/;
       if (regex.test(letter)) {
-        phraser.push(`<li class="hide letter ${letter}">${letter}</li>`);
+        phrase.push(`<li class="hide letter ${letter}">${letter}</li>`);
       } else {
-        phraser.push(`<li class="hide space"> </li>`);
+        phrase.push(`<li class="hide space"> </li>`);
       }
     });
-    return phraser;
+    return phrase;
   }
 
 }
